@@ -1,29 +1,9 @@
-# Volleybal Rotatiehulp – Progressive Web App
+# Volleybal Rotatiehulp – PWA
 
-Deze map is een complete PWA-versie van de oorspronkelijke `volleybal-rotatie-mobiel.html`.
+Upload alle bestanden uit deze map naar de hoofdmap van je GitHub Pages repository.
 
-## Inhoud
-- `index.html` – de webapp
-- `manifest.json` – PWA-installatiegegevens
-- `sw.js` – offline caching
-- `icons/` – app-iconen voor Android/iPhone/iPad
-- `.nojekyll` – voorkomt onnodige Jekyll-verwerking op GitHub Pages
+Daarna: GitHub → Settings → Pages → Deploy from a branch → `main` → `/ (root)`.
 
-## Publiceren via GitHub Pages
+De app gebruikt localStorage voor de opstelling en rotatiestand. Daardoor blijft de gegevensset behouden bij een gewone refresh, ook op Android.
 
-1. Maak op GitHub een nieuwe repository, bijvoorbeeld `volleybal-rotatie`.
-2. Upload **de bestanden uit deze map** naar de hoofdmap van de repository.
-3. Open in GitHub: **Settings → Pages**.
-4. Kies bij de publicatiebron **Deploy from a branch**.
-5. Selecteer de branch `main` en map `/ (root)`.
-6. Sla op.
-7. Na de GitHub Pages-deployment krijg je een adres in de vorm:
-   `https://jouwgebruikersnaam.github.io/volleybal-rotatie/`
-
-Gebruik daarna bij voorkeur Safari op iPhone/iPad en kies **Deel → Zet op beginscherm**.
-
-## Belangrijk
-De service worker werkt niet wanneer je `index.html` rechtstreeks opent via `file://`.
-Dat is normaal. Op GitHub Pages draait de app via HTTPS en werkt de PWA-functionaliteit wel.
-
-De huidige rotatie/opstelling wordt bovendien lokaal in de browser opgeslagen, zodat een refresh de gegevens niet meer direct wist.
+De service worker zorgt daarnaast voor offline caching. Een service worker werkt alleen via HTTPS of localhost; `file://` is daarvoor niet geschikt.
