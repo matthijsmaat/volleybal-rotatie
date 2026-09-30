@@ -1,4 +1,4 @@
-const CACHE_NAME="volleybal-rotatie-v14";
+const CACHE_NAME="volleybal-rotatie-v15";
 const SHELL=["./","./index.html","./manifest.json","./icons/icon-192.png","./icons/icon-512.png","./icons/apple-touch-icon.png"];
 
 self.addEventListener("install",e=>e.waitUntil(
